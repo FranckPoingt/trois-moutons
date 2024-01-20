@@ -1,11 +1,15 @@
 <script>
 	import '../app.pcss';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 </script>
 
 <main
 	class="relative flex min-h-svh flex-col items-center justify-start overflow-hidden pt-4 text-center"
 >
 	<img src="/3m.svg" alt="3 Moutons Festival" class="w-1/3 sm:w-1/6" />
+
 	<span class="mt-2">Festival des</span>
 	<h1 class="text-4xl font-bold md:text-6xl">Trois Moutons</h1>
 	<h2 class="text-2xl font-bold text-primary md:text-4xl">#3</h2>
