@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Countdown from '@/components/countdown.svelte';
 	import { slide, fade } from 'svelte/transition';
+	import { sineOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
 	let ready = false;
@@ -14,7 +15,7 @@
 			<h3 class="text-5xl font-black" transition:slide={{ duration: 800, delay: 100 }}>
 				ENTREZ DANS LA LEGENDE.
 			</h3>
-			<h3 class="text-2xl font-black text-primary" transition:fade={{ delay: 1000, duration: 200 }}>
+			<h3 class="text-2xl font-black text-primary" transition:fade={{ delay: 1000, duration: 250 }}>
 				ENCORE.
 			</h3>
 			<script
@@ -28,7 +29,7 @@
 				autoplay
 				direction="1"
 				mode="normal"
-				transition:fade={{ delay: 1200, duration: 200 }}
+				transition:fade={{ delay: 1500, duration: 500, easing: sineOut }}
 			></lottie-player>
 		</div>
 	{/if}
